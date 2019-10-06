@@ -4,6 +4,7 @@ FROM alvrme/alpine-android:android-29
 RUN apk add --no-cache libx11-dev
 RUN apk add --no-cache libpulse
 RUN apk add --no-cache mesa-gl
+RUN apk add --no-cache nss
 RUN ${ANDROID_HOME}/tools/bin/sdkmanager "emulator" "system-images;android-21;google_apis;x86_64"
 RUN ${ANDROID_HOME}/tools/bin/sdkmanager --update
 
