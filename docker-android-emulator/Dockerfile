@@ -10,8 +10,9 @@ RUN apk add --no-cache libxcomposite
 RUN apk add --no-cache libxcursor
 RUN apk add --no-cache libxi
 RUN apk add --no-cache libxtst
-RUN apk add --no-cache alsa-lib
+RUN apk add --no-cache alsa-lib-dev
 RUN apk add --no-cache libogg
+RUN apk add --no-cache qt5-qtwebengine
 RUN ${ANDROID_HOME}/tools/bin/sdkmanager "emulator" "system-images;android-21;google_apis;x86_64"
 RUN ${ANDROID_HOME}/tools/bin/sdkmanager --update
 
