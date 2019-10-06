@@ -6,7 +6,7 @@ set -eu
 
 bootanim=""
 failcounter=0
-timeout_in_sec=5
+timeout_in_sec=300
 
 until [[ "$bootanim" =~ "stopped" ]]; do
   echo "Yes"
