@@ -1,6 +1,6 @@
 FROM alvrme/alpine-android:android-29
 
-RUN ${ANDROID_HOME}/tools/bin/sdkmanager "system-images;android-21;google_apis;x86_64"
+RUN ${ANDROID_HOME}/tools/bin/sdkmanager "emulator" "system-images;android-21;google_apis;x86_64"
 
 ##################
 # Set mandatory environment variables

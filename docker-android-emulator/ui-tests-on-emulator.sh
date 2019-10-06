@@ -6,7 +6,7 @@ set -eu
 START=`date +%s` > /dev/null
 
 echo no | $ANDROID_HOME/tools/bin/avdmanager -v create avd --force -n test --abi google_apis/x86_64 --package 'system-images;android-21;google_apis;x86_64'
-$ANDROID_HOME/tools/bin/avdmanager list avd
+$ANDROID_HOME/tools/emulator -list-avds
 $ANDROID_HOME/tools/emulator -avd test -no-window -no-boot-anim -no-audio -verbose &
 wait-for-emulator
 unlock-emulator-screen
