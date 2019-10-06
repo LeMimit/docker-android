@@ -6,6 +6,7 @@ RUN apk add --no-cache libpulse
 RUN apk add --no-cache mesa-gl
 RUN apk add --no-cache nss
 RUN apk add --no-cache fontconfig
+RUN apk add --no-cache libxcomposite
 RUN ${ANDROID_HOME}/tools/bin/sdkmanager "emulator" "system-images;android-21;google_apis;x86_64"
 RUN ${ANDROID_HOME}/tools/bin/sdkmanager --update
 
