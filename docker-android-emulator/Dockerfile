@@ -1,12 +1,13 @@
 FROM alvrme/alpine-android:android-29
 
 RUN ${ANDROID_HOME}/tools/bin/sdkmanager "emulator" "system-images;android-21;google_apis;x86_64"
+RUN ${ANDROID_HOME}/tools/bin/sdkmanager --update
 
 ##################
 # Set mandatory environment variables
 ##################
 #ENV ANDROID_EMULATOR_FORCE_32BIT=true
-#ENV ANDROID_SDK_HOME=/root/.android/ 
+ENV ANDROID_SDK_HOME=/root/.android/ 
 
 COPY ui-tests-on-emulator.sh /usr/bin/ui-tests-on-emulator
 COPY run-ui-tests.sh /usr/bin/run-ui-tests
